@@ -72,17 +72,30 @@ foreach ($selected_words as $index => $word){
 }
 
 if  ($symbol) {
-
+	//$symbol
+	//$newsym=rand(0,5);
+	//$symb=arra_rand($syymbols,1);
+	$sysmb= $symbols[rand(0,count($symbols)-1)];
+	//echo '<br/>'.$sysmb;
+	
+	//$symbol
 //str_replace
 }
 
 if  ($number) {
 
+$num=rand (0,9);
+	//echo '<br/>'.$num;
+
+
 }
 
-$password =implode ("-",$selected_words);		
+$password1 =implode (" ", $selected_words);	}
 	
-	}
+$password=$password1.$num.$sysmb;
+
+	
+
 	
 
 

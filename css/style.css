@@ -1,4 +1,8 @@
 .text{
 color: blue;
 font-size: 100%;
+
+}
+.float{
+float: right;
 }

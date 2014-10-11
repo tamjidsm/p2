@@ -4,8 +4,9 @@
 
 if (isset ($_POST['count'])) {
 	$count= $_POST['count'];
+		}
 	
-	//echo $_POST['count'];
+//echo $_POST['count'];
 	
 	if ( ! is_number($count)){
 
