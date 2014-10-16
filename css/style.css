@@ -1,7 +1,7 @@
 .text{
 color: blue;
 font-size: 100%;
-
+background-color: yellow;
 }
 .float{
 float: right;

@@ -1,18 +1,19 @@
 <?php
 
 if (isset($_POST['count'])){
-		//echo $_POST['count'];
 		$count= $_POST['count'];
-	
 	if ( !is_numeric($count)){
-return 'We have to put number inside the values';
+		echo '<h2 style="color: red;">Keep numeric into "Words number" field, Alphabet or null might warn you	! </h2>';
 	}		
-} else {
-	$count=1;
-}
+}  else {
+		unset($password);
+		return '';
+		}
+//$count=1;
+//}
+	
 
 if (isset($_POST['uppercase'])){
-		//echo $_POST['uppercase'];
 
 	$uppercase= true;
 	}
@@ -21,7 +22,6 @@ if (isset($_POST['uppercase'])){
 		}
 
 if (isset($_POST['symbol'])){
-		//echo $_POST['symbol'];
 		$symbol= true;
 	}
 	else {
@@ -30,14 +30,11 @@ if (isset($_POST['symbol'])){
 
 
 if (isset($_POST['number'])){
-		//echo $_POST['number'];
 		$number= true;
 	}
 	else {
 		$number= false;
 	}
-
-	
 
 	
 if ($words = file('words.txt')){
@@ -47,14 +44,9 @@ if ($words = file('words.txt')){
 	// creating an array based on dictionary
 	
 $selected_words= [];
-//creating array for symbol
-$symbols =['!','@','$','^','#','*'];
-//creating array for number
-$number =[0,1,2,3,4,5,6,7,8,9];
 
 	for($i=0;$i<$count;$i++) {
 
-//random number from dictionary
 # selected words
 $max= count($words) -1;
 $rand=rand(0, $max);
@@ -70,35 +62,27 @@ foreach ($selected_words as $index => $word){
 	//echo $selected_words[$index].'<br/>';
 	}
 }
+		}
+//creating array for symbol
+$symbols =['!','@','$','^','#','*','&','(',')','-','_',';','`','~','=','<','{','}','<','>'];
+//creating array for number
+$numbers =[0,1,2,3,4,5,6,7,8,9];
 
+$sysmb = '';
+$num = '';
 if  ($symbol) {
-	//$symbol
-	//$newsym=rand(0,5);
-	//$symb=arra_rand($syymbols,1);
 	$sysmb= $symbols[rand(0,count($symbols)-1)];
-	//echo '<br/>'.$sysmb;
-	
-	//$symbol
-//str_replace
-}
+	}
 
 if  ($number) {
+$num= $numbers[rand(0,count($numbers)-1)];
 
-$num=rand (0,9);
+//$num=rand (0,9);
 	//echo '<br/>'.$num;
+	}
 
-
-}
-
-$password1 =implode (" ", $selected_words);	}
-	
-$password=$password1.$num.$sysmb;
-
-	
-
-	
-
-
+$password1 =implode (" ", $selected_words);		
+$password="$password1".$num."$sysmb";
 
 //pull data from from
 //run responses from logic
