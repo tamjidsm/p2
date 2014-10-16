@@ -1,4 +1,6 @@
 ## project 2 - Sm Tamjid
+# githumb- https://github.com/tamjidsm/p2
+# live site - http://104.131.7.62/p2/
 #Password engine rule:
 1 - You can put any number into word number field- positive integer
 	- negative number will work as 0 count entered
