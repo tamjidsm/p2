@@ -4,7 +4,7 @@
 ?>
 <?php require ('logic1.php') ?>
 
-<!DOCTYPE html>
+<!DOCTYPE html
 <?php include('header.php')?>
 <html>	
  <body class='text'>
