@@ -1,4 +1,4 @@
-<!DOCTYPE html
+<!DOCTYPE html>
 <?php include('header.php')?>
 <?php require ('logic1.php') ?>
 
